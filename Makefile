@@ -1,3 +1,7 @@
+#
+# Makefile for SnmpPoller project
+#
+
 # Go related variables.
 GOCMD=go
 GOBUILD=$(GOCMD) build
