@@ -11,5 +11,7 @@ BINARY_NAME=SnmpPoller
 
 all: build
 
+#
+# Build poller object
 build:
   $(GOBUILD) -o $(BINARY_NAME) -v *.go
