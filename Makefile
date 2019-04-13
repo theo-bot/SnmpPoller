@@ -8,4 +8,4 @@ BINARY_NAME=SnmpPoller
 all: build
 
 build:
-  $(GOBUILD) -o $(BINARY_NAME) -v Poller.go
+  $(GOBUILD) -o $(BINARY_NAME) -v *.go
