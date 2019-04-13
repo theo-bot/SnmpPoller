@@ -1,0 +1,6 @@
+{
+  "Logfile" : "/tmp/SnmpPoller.log",
+  "Output" : {
+    "Number" : 4
+  }
+}
