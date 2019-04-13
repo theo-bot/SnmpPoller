@@ -2,21 +2,25 @@ package main
 
 import (
 	"flag"
-	"fmt"
-	"github.com/spf13/viper"
+	"github.com/sirupsen/logrus"
 )
 
 var configDir string
+var logger *logrus.Logger
 
 func init() {
 	flag.StringVar(&configDir, "config", "/etc/SnmpPoller", "Config path")
 	flag.Parse()
+
 }
 
 func main() {
-
-	fmt.Println(configDir)
+	//
+	// Import configuration
+	//
 	ImportConfig(configDir)
 
-	fmt.Println(viper.Get("Output.Number"))
+	logger = SetupLogger()
+
+	logger.Info("Configuration loaded")
 }
